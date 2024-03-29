@@ -59,7 +59,7 @@
                                         <p class="text-base">{{ $comment->content }}</p>
                                     </div>
                                 </div>
-                                @if ('admin' === auth()->user()->role)
+                                @if (auth()->check() && 'admin' === auth()->user()->role)
                                 <div class="my-4 px-4 justify-self-end">
                                     <x-danger-button-sm
                                         x-data=""

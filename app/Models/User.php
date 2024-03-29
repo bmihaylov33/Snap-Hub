@@ -64,4 +64,14 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Permission::class);
     }
+
+    /**
+    * Add the photo relationship to the user.
+    *
+    * @return \Illuminate\Database\Eloquent\Relations\HasMany
+    */
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
 }

@@ -38,7 +38,7 @@
                         </x-nav-link>
                     @endif
                 @else
-                    <x-nav-link :href="route('admin.home')" :active="request()->routeIs('admin.home')">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('admin.home')">
                         {{ __('Home') }}
                     </x-nav-link>
                     <x-nav-link :href="route('photos')" :active="request()->routeIs('photos')">

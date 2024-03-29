@@ -24,7 +24,7 @@
                             <h5 class="font-bold text-xl truncate hover:opacity-75">{{ __('Comments') }}</h5>
                         </div>
                     </a>
-                    @if ('admin' === auth()->user()->role)
+                    @if (auth()->check() && 'admin' === auth()->user()->role)
                         <x-danger-button
                             x-data=""
                             x-on:click.prevent="$dispatch('open-modal', 'confirm-image-deletion')"
